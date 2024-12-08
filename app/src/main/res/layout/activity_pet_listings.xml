@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_pet_listings"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#83B5B5B5"
+    tools:context=".PetListings">
+
+    <ScrollView
+        android:id="@+id/scrollViewPetListings"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/coordinatorLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck"
+        tools:layout_editor_absoluteX="16dp">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Bottom navigation for navigating through the app -->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="89dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edittext_background">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:id="@+id/imageView11"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        app:srcCompat="@drawable/home" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:id="@+id/imageView12"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        app:srcCompat="@drawable/cart" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical"
+                    tools:ignore="ExtraText">
+
+                    <ImageView
+                        android:id="@+id/imageView13"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        app:srcCompat="@drawable/plus" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:id="@+id/imageView14"
+                        android:layout_width="match_parent"
+                        android:layout_height="51dp"
+                        app:srcCompat="@drawable/heart" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:id="@+id/imageView15"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        app:srcCompat="@drawable/user_icon" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

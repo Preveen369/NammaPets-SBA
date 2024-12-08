@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#83B5B5B5">
+
+    <!-- Message for empty cart -->
+    <TextView
+        android:id="@+id/empty_cart_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your cart is empty!"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:visibility="gone"
+        android:layout_marginBottom="16dp" />
+
+    <!-- ScrollView to contain cart items -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:id="@+id/cart_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <!-- Button to proceed to buy -->
+    <Button
+        android:id="@+id/proceed_to_buy_button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Proceed to Buy"
+        android:backgroundTint="@color/maroon"
+        android:background="@drawable/edittext_background"
+        android:textColor="@android:color/white"
+        android:textSize="17dp"
+        android:padding="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone" />
+</LinearLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_margin="8dp"
+app:cardCornerRadius="8dp"
+app:cardElevation="4dp">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <!-- Image of the pet -->
+    <ImageView
+        android:id="@+id/favourite_item_image"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="Pet Image"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Pet name -->
+        <TextView
+            android:id="@+id/favourite_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pet Name"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+        <!-- Pet category -->
+        <TextView
+            android:id="@+id/favourite_item_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pet Category"
+            android:textSize="18sp"
+            android:textColor="@android:color/darker_gray"/>
+    </LinearLayout>
+
+    <!-- Remove button -->
+    <Button
+        android:id="@+id/favourite_item_remove_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remove"
+        android:textColor="@android:color/white"
+        android:background="@drawable/edittext_background"
+        android:backgroundTint="@android:color/holo_red_dark"/>
+
+</LinearLayout>
+
+</androidx.cardview.widget.CardView>

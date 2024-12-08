@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#83B5B5B5"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/searchEditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/edittext_background"
+                android:drawableStart="@drawable/search_icon"
+                android:drawablePadding="8dp"
+                android:ems="10"
+                android:inputType="text"
+                android:padding="10dp"
+                tools:ignore="SpeakableTextPresentCheck"
+                android:textCursorDrawable="@drawable/custom_cursor"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="330dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center">                >
+
+
+                <ImageView
+                    android:id="@+id/pets_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.489"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="@drawable/edittext_background"
+                    app:srcCompat="@drawable/pets"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/categoryTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:text="Categories"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:padding="5dp"
+                android:background="@drawable/edittext_background">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/cat1"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        app:srcCompat="@drawable/cat1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="cows"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical"
+                    android:layout_marginRight="5dp">
+
+                    <ImageView
+                        android:id="@+id/cat2"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        app:srcCompat="@drawable/cat2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="dogs"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:layout_marginRight="5dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/cat3"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        app:srcCompat="@drawable/cat3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="cats"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:layout_marginRight="5dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/cat4"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        app:srcCompat="@drawable/cat4" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="rabbits"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical"
+
+                    android:layout_marginRight="5dp">
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        app:srcCompat="@drawable/view_all"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="view all"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/recentProductsTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="24dp"
+                android:text="Recent Products"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="89dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edittext_background">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:id="@+id/imageView11"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        app:srcCompat="@drawable/home" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:id="@+id/imageView12"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        app:srcCompat="@drawable/cart" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical"
+                    tools:ignore="ExtraText">
+
+                    <ImageView
+                        android:id="@+id/imageView13"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        app:srcCompat="@drawable/plus" /><![CDATA[                        />
+
+                    ]]>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:id="@+id/imageView14"
+                        android:layout_width="match_parent"
+                        android:layout_height="51dp"
+                        app:srcCompat="@drawable/heart" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:id="@+id/imageView15"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        app:srcCompat="@drawable/user_icon" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

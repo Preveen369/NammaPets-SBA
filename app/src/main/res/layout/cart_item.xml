@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:layout_gravity="center"
+    android:elevation="4dp"
+    app:cardCornerRadius="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_margin="5dp">
+
+        <ImageView
+            android:id="@+id/cart_item_image"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Cart item image"
+            android:layout_marginEnd="8dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/cart_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item Name"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/cart_item_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price: $0.00"
+                android:textSize="19sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/cart_item_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quantity: 1"
+                android:textSize="19sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <Button
+                    android:id="@+id/cart_item_decrease_quantity"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="@color/red"
+                    android:background="@drawable/edittext_background"
+                    android:text="-"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/cart_item_increase_quantity"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:backgroundTint="@color/green"
+                    android:background="@drawable/edittext_background"
+                    android:text="+"
+                    android:textColor="#212121"
+                    android:textSize="18sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/cart_item_delete_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remove"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/red_variant"
+            android:background="@drawable/edittext_background"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

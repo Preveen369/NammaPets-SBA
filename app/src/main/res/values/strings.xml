@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">NammaPets SBA</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pet_image_description">Image of the pet</string>
+    <string name="lorem_text">Lorem ipsum odor amet, consectetuer adipiscing elit. Fringilla velit magna
+        senectus auctor habitasse. Auctor ac magnis varius varius dis maecenas; turpis enim. Fusce sodales
+        nisi tempor maecenas ut sed.</string>
+
+</resources>

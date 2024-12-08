@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_cart"
+        android:icon="@drawable/cart_menu_icon"
+        android:orderInCategory="1"
+        android:title="cart"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_category"
+        android:title="Category"
+        android:orderInCategory="2"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_profile"
+        android:title="Profile"
+        android:orderInCategory="3"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_home"
+        android:title="Dashboard"
+        android:orderInCategory="4"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_uploads"
+        android:title="Uploads"
+        android:orderInCategory="5"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_login"
+        android:title="Login / Signup"
+        android:orderInCategory="6"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_favourites"
+        android:title="Favourites"
+        android:orderInCategory="7"
+        app:showAsAction="never" />
+
+</menu>

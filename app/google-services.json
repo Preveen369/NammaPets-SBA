@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "900637491580",
+    "project_id": "nammapets-sba",
+    "storage_bucket": "nammapets-sba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:900637491580:android:46757ca9cab1730877e4f9",
+        "android_client_info": {
+          "package_name": "com.example.nammapetssba"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA87XunD239C1UO36HYDOBprzrtxd7uJXw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

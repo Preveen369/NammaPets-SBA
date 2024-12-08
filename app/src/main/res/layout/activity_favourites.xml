@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".Favourites"
+    android:background="#83B5B5B5">
+
+    <!-- Message when no favourites exist -->
+    <TextView
+        android:id="@+id/empty_favourites_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No favourites available!"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+    <!-- Scrollable container for favourites -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/favourites_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+    </ScrollView>
+</LinearLayout>
+
