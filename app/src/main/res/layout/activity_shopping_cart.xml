@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="#83B5B5B5">
+    android:background="@drawable/pet_shop_wallpaper"
+    tools:context=".ShoppingCart">
 
     <!-- Message for empty cart -->
     <TextView
@@ -15,7 +16,7 @@
         android:text="Your cart is empty!"
         android:gravity="center"
         android:textSize="18sp"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:visibility="gone"
         android:layout_marginBottom="16dp" />
 
@@ -37,7 +38,7 @@
     <Button
         android:id="@+id/proceed_to_buy_button"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:text="Proceed to Buy"
         android:backgroundTint="@color/maroon"
         android:background="@drawable/edittext_background"

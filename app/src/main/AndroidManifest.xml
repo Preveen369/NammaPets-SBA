@@ -12,9 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NammaPets"
         tools:targetApi="31">
-        <activity
-            android:name=".FavouriteItem"
-            android:exported="false" />
+
         <activity
             android:name=".SplashActivity"
             android:exported="true"
@@ -89,16 +87,6 @@
             android:name=".Favourites"
             android:exported="true"
             android:label="Favourites">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".UploadActivity"
-            android:exported="true"
-            android:label="Uploads">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

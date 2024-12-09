@@ -5,7 +5,7 @@
     android:id="@+id/activity_pet_listings"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#83B5B5B5"
+    android:background="@drawable/pet_shop_wallpaper"
     tools:context=".PetListings">
 
     <ScrollView
@@ -48,7 +48,7 @@
             android:layout_marginStart="12dp"
             android:layout_marginEnd="12dp"
             android:layout_marginBottom="10dp"
-            android:background="@drawable/edittext_background">
+            android:background="@drawable/edittext_background_bottombar">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -89,19 +89,7 @@
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.2"
-                    android:orientation="vertical"
-                    tools:ignore="ExtraText">
 
-                    <ImageView
-                        android:id="@+id/imageView13"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        app:srcCompat="@drawable/plus" />
-                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"

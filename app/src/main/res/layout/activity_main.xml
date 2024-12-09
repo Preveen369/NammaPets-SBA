@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#83B5B5B5"
+    android:background="@drawable/pet_shop_wallpaper"
     tools:context=".MainActivity">
 
     <ScrollView
@@ -29,12 +29,13 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="24dp"
                 android:background="@drawable/edittext_background"
+                android:backgroundTint="#F2D5DA"
                 android:drawableStart="@drawable/search_icon"
                 android:drawablePadding="8dp"
                 android:ems="10"
                 android:inputType="text"
                 android:padding="10dp"
-                tools:ignore="SpeakableTextPresentCheck"
+                android:hint="Search here"
                 android:textCursorDrawable="@drawable/custom_cursor"/>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -44,7 +45,8 @@
                 android:layout_marginEnd="24dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:layout_gravity="center">                >
+                android:layout_gravity="center"
+                tools:ignore="ExtraText">                >
 
 
                 <ImageView
@@ -71,7 +73,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="24dp"
                 android:text="Categories"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
@@ -84,7 +86,8 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="24dp"
                 android:padding="5dp"
-                android:background="@drawable/edittext_background">
+                android:background="@drawable/edittext_background"
+                android:backgroundTint="#F2D5DA">
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -198,14 +201,14 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/recentProductsTextView"
+                android:id="@+id/AboutTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="24dp"
-                android:text="Recent Products"
-                android:textColor="@color/black"
+                android:text="About our app"
+                android:textColor="@color/white"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
@@ -226,7 +229,7 @@
             android:layout_marginStart="12dp"
             android:layout_marginEnd="12dp"
             android:layout_marginBottom="10dp"
-            android:background="@drawable/edittext_background">
+            android:background="@drawable/edittext_background_bottombar">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -267,21 +270,6 @@
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.2"
-                    android:orientation="vertical"
-                    tools:ignore="ExtraText">
-
-                    <ImageView
-                        android:id="@+id/imageView13"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        app:srcCompat="@drawable/plus" /><![CDATA[                        />
-
-                    ]]>
-                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"

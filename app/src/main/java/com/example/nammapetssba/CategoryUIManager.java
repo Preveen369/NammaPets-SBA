@@ -13,7 +13,6 @@ public class CategoryUIManager {
         img4 = activity.findViewById(R.id.cat4);
         profile = activity.findViewById(R.id.imageView15);
         home = activity.findViewById(R.id.imageView11);
-        uploads = activity.findViewById(R.id.imageView13);
         cart = activity.findViewById(R.id.imageView12);
         favourites = activity.findViewById(R.id.imageView14);
     }
@@ -21,7 +20,6 @@ public class CategoryUIManager {
     // Provide getters for UI components
     public ImageView getProfile() { return profile; }
     public ImageView getHome() { return home; }
-    public ImageView getUploads() { return uploads; }
     public ImageView getCart() { return cart; }
     public ImageView getFavourites() { return favourites; }
 }

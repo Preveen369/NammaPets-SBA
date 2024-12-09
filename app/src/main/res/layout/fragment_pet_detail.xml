@@ -9,7 +9,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="580dp"
-        android:background="@color/white"
+        android:backgroundTint="#F3E2E5"
         app:cardCornerRadius="15dp">
 
         <LinearLayout
@@ -53,7 +53,7 @@
                 android:textSize="20sp" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:paddingLeft="7dp"
                 android:paddingRight="7dp">
@@ -80,17 +80,17 @@
 
                 <EditText
                     android:id="@+id/qty_edit_text"
-                    android:layout_width="80dp"
+                    android:layout_width="71dp"
                     android:layout_height="48dp"
                     android:layout_margin="5.2dp"
                     android:background="@drawable/edittext_background"
-                    android:backgroundTint="#FECBD6"
+                    android:backgroundTint="#FFC2CF"
                     android:gravity="center"
                     android:hint="Qty"
                     android:inputType="number"
                     android:textColor="@color/black"
                     android:textColorHint="@color/darkgray"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
             </LinearLayout>
 

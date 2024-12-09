@@ -21,7 +21,7 @@ public class NavigationHandler {
     }
 
     // Overloaded methods for navigation listeners
-    public void setNavigationListeners(View viewAll, View profile, View home, View uploads, View cart, View favourites) {
+    public void setNavigationListeners(View viewAll, View profile, View home, View cart, View favourites) {
         viewAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -40,12 +40,6 @@ public class NavigationHandler {
                 NavigationHandler.this.navigateToHome();
             }
         });
-        uploads.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                NavigationHandler.this.navigateToUploads();
-            }
-        });
         cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,7 +54,7 @@ public class NavigationHandler {
         });
     }
 
-    public void setNavigationListeners(View profile, View home, View uploads, View cart, View favourites) {
+    public void setNavigationListeners(View profile, View home, View cart, View favourites) {
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -71,12 +65,6 @@ public class NavigationHandler {
             @Override
             public void onClick(View view) {
                 NavigationHandler.this.navigateToHome();
-            }
-        });
-        uploads.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                NavigationHandler.this.navigateToUploads();
             }
         });
         cart.setOnClickListener(new View.OnClickListener() {
@@ -131,11 +119,6 @@ public class NavigationHandler {
         Toast.makeText(activity, "Navigating to Favourites", Toast.LENGTH_SHORT).show();
     }
 
-    private void navigateToUploads() {
-        Intent intent = new Intent(activity, UploadActivity.class);
-        activity.startActivity(intent);
-    }
-
     private void navigateToLogin() {
         Intent intent = new Intent(activity, LoginActivity.class);
         activity.startActivity(intent);
@@ -153,9 +136,6 @@ public class NavigationHandler {
             return true;
         } else if (itemId == R.id.menu_cart) {
             navigateToCart();
-            return true;
-        } else if (itemId == R.id.menu_uploads) {
-            navigateToUploads();
             return true;
         } else if (itemId == R.id.menu_login) {
             navigateToLogin();

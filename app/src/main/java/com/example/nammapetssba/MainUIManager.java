@@ -14,7 +14,6 @@ public class MainUIManager {
         viewAll = activity.findViewById(R.id.imageView5);
         profile = activity.findViewById(R.id.imageView15);
         home = activity.findViewById(R.id.imageView11);
-        uploads = activity.findViewById(R.id.imageView13);
         cart = activity.findViewById(R.id.imageView12);
         favourites = activity.findViewById(R.id.imageView14);
     }
@@ -23,7 +22,6 @@ public class MainUIManager {
     public ImageView getViewAll() { return viewAll; }
     public ImageView getProfile() { return profile; }
     public ImageView getHome() { return home; }
-    public ImageView getUploads() { return uploads; }
     public ImageView getCart() { return cart; }
     public ImageView getFavourites() { return favourites; }
 }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#83B5B5B5"
+    android:background="@drawable/pet_shop_wallpaper"
     tools:context=".ProfileActivity">
 
     <androidx.cardview.widget.CardView
@@ -23,7 +23,8 @@
             android:paddingStart="15dp"
             android:paddingTop="15dp"
             android:paddingEnd="15dp"
-            android:paddingBottom="15dp">
+            android:paddingBottom="15dp"
+            android:background="#ECD9DC">
 
             <LinearLayout
                 android:id="@+id/item_header_button_parent"
@@ -40,7 +41,7 @@
                     android:layout_height="40dp"
                     android:layout_marginEnd="10dp"
                     android:minWidth="40dp"
-                    app:cardBackgroundColor="#FE2B54"
+                    app:cardBackgroundColor="@color/light_maroon"
                     app:cardCornerRadius="3dp"
                     app:cardElevation="0dp">
 
@@ -183,8 +184,8 @@
 
                             <TextView
                                 android:id="@+id/sell_value"
-                                android:layout_width="65dp"
-                                android:layout_height="43dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 android:layout_centerHorizontal="true"
                                 android:layout_marginStart="5dp"
                                 android:layout_marginEnd="5dp"
@@ -229,8 +230,8 @@
 
                             <TextView
                                 android:id="@+id/buy_value"
-                                android:layout_width="51dp"
-                                android:layout_height="40dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 android:layout_centerHorizontal="true"
                                 android:layout_marginStart="5dp"
                                 android:layout_marginEnd="5dp"

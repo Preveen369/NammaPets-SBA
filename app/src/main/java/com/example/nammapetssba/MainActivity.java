@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
                 uiManager.getViewAll(),
                 uiManager.getProfile(),
                 uiManager.getHome(),
-                uiManager.getUploads(),
                 uiManager.getCart(),
                 uiManager.getFavourites()
         );

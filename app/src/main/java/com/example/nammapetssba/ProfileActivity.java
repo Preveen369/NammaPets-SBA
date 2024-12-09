@@ -55,7 +55,7 @@ public class ProfileActivity extends AppCompatActivity {
         ImageView logoutIcon = findViewById(R.id.logout_icon);
 
         CardView itemButton1Card = findViewById(R.id.item_button_1_card_parent);
-        CardView itemButton2Card = findViewById(R.id.item_button_2_card_parent);
+        // CardView itemButton2Card = findViewById(R.id.item_button_2_card_parent);
         userImage = findViewById(R.id.user_image);
 
         // Set default profile image
@@ -75,19 +75,20 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
 
-        // Add click listener for logout button
-        itemButton2Card.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Handle logout button click
-            }
-        });
 
         // Set click listener for settings icon
         logoutIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 logOut();
+            }
+        });
+
+        sellValue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ProfileActivity.this, SellPetActivity.class);
+                startActivity(intent);
             }
         });
 

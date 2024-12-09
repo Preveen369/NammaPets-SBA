@@ -26,7 +26,6 @@ public class PetListings extends AppCompatActivity {
         navigationHandler.setNavigationListeners(
                 uiManager.getProfile(),
                 uiManager.getHome(),
-                uiManager.getUploads(),
                 uiManager.getCart(),
                 uiManager.getFavourites()
         );

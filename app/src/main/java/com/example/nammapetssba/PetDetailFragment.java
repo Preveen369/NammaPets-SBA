@@ -15,6 +15,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class PetDetailFragment extends Fragment {
 
     private static final String ARG_PET_NAME = "pet_name";
@@ -22,6 +25,8 @@ public class PetDetailFragment extends Fragment {
     private static final String ARG_PET_PRICE = "pet_price";
     private static final String ARG_PET_DESCRIPTION = "pet_description";
     private static final String ARG_PET_CATEGORY = "pet_category_name";
+
+    private FirebaseAuth firebaseAuth;
 
     public static PetDetailFragment newInstance(String petName, int petImage, String petPrice, String petDescription, String petCategory) {
         PetDetailFragment fragment = new PetDetailFragment();
@@ -40,6 +45,8 @@ public class PetDetailFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_pet_detail, container, false);
+
+        firebaseAuth = FirebaseAuth.getInstance();
 
         ImageView petImageView = view.findViewById(R.id.pet_image_view);
         TextView petNameTextView = view.findViewById(R.id.pet_name_text_view);
@@ -65,52 +72,47 @@ public class PetDetailFragment extends Fragment {
         }
 
         addToFavButton.setOnClickListener(v -> {
-            String petName = getArguments().getString(ARG_PET_NAME);
-            int petImageId = getArguments().getInt(ARG_PET_IMAGE);
-            String petCategory = getArguments().getString(ARG_PET_CATEGORY);
+            if (isUserLoggedIn()) {
+                String petName = getArguments().getString(ARG_PET_NAME);
+                int petImageId = getArguments().getInt(ARG_PET_IMAGE);
+                String petCategory = getArguments().getString(ARG_PET_CATEGORY);
 
-            // Validate that pet details exist
-            if (petName != null) {
                 Intent intent = new Intent(getActivity(), Favourites.class);
                 intent.putExtra("pet_name", petName);
                 intent.putExtra("pet_image", petImageId);
                 intent.putExtra("pet_category", petCategory);
                 startActivity(intent);
             } else {
-                Toast.makeText(getActivity(), "Pet details missing!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Please log in to add to favourites.", Toast.LENGTH_SHORT).show();
             }
-
         });
 
-        // Handle Add to Cart button click
         addToCartButton.setOnClickListener(v -> {
-            String petName = getArguments().getString(ARG_PET_NAME);
-            String petPrice = getArguments().getString(ARG_PET_PRICE);
-            String petDescription = getArguments().getString(ARG_PET_DESCRIPTION);
-            int petImageId = getArguments().getInt(ARG_PET_IMAGE);
-            String petCategory = getArguments().getString(ARG_PET_CATEGORY);
+            if (isUserLoggedIn()) {
+                String petName = getArguments().getString(ARG_PET_NAME);
+                String petPrice = getArguments().getString(ARG_PET_PRICE);
+                String petDescription = getArguments().getString(ARG_PET_DESCRIPTION);
+                int petImageId = getArguments().getInt(ARG_PET_IMAGE);
+                String petCategory = getArguments().getString(ARG_PET_CATEGORY);
 
-            // Validate quantity input
-            String quantityText = quantity.getText().toString().trim();
-            if (quantityText.isEmpty()) {
-                Toast.makeText(getActivity(), "Please enter the quantity!", Toast.LENGTH_SHORT).show();
-                return;
-            }
-
-            int petQuantity;
-            try {
-                petQuantity = Integer.parseInt(quantityText);
-                if (petQuantity <= 0) {
-                    Toast.makeText(getActivity(), "Quantity must be greater than zero!", Toast.LENGTH_SHORT).show();
+                String quantityText = quantity.getText().toString().trim();
+                if (quantityText.isEmpty()) {
+                    Toast.makeText(getActivity(), "Please enter the quantity!", Toast.LENGTH_SHORT).show();
                     return;
                 }
-            } catch (NumberFormatException e) {
-                Toast.makeText(getActivity(), "Invalid quantity entered!", Toast.LENGTH_SHORT).show();
-                return;
-            }
 
-            // Validate that pet details exist
-            if (petName != null && petPrice != null && petDescription != null) {
+                int petQuantity;
+                try {
+                    petQuantity = Integer.parseInt(quantityText);
+                    if (petQuantity <= 0) {
+                        Toast.makeText(getActivity(), "Quantity must be greater than zero!", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                } catch (NumberFormatException e) {
+                    Toast.makeText(getActivity(), "Invalid quantity entered!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 Intent intent = new Intent(getActivity(), ShoppingCart.class);
                 intent.putExtra("pet_name", petName);
                 intent.putExtra("pet_price", petPrice);
@@ -120,10 +122,15 @@ public class PetDetailFragment extends Fragment {
                 intent.putExtra("pet_qty", petQuantity);
                 startActivity(intent);
             } else {
-                Toast.makeText(getActivity(), "Pet details missing!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Please log in to add to cart.", Toast.LENGTH_SHORT).show();
             }
         });
 
         return view;
+    }
+
+    private boolean isUserLoggedIn() {
+        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
+        return currentUser != null;
     }
 }

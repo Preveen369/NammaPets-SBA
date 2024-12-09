@@ -1,24 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@drawable/pet_shop_wallpaper">
 
-    <EditText
-        android:id="@+id/petName"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Pet Name" />
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/linear_layout_outline">
 
-    <EditText
-        android:id="@+id/petBreed"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Pet Breed" />
+        <!-- Pet Name -->
+        <EditText
+            android:id="@+id/petName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Pet Name"
+            android:inputType="text"
+            android:padding="12dp"
+            android:backgroundTint="@color/maroon"
+            android:textCursorDrawable="@color/maroon"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sell Pet" />
-</LinearLayout>
+        <!-- Pet Breed -->
+        <EditText
+            android:id="@+id/petBreed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Pet Breed"
+            android:inputType="text"
+            android:padding="12dp"
+            android:backgroundTint="@color/maroon"
+            android:layout_marginTop="12dp"
+            android:textCursorDrawable="@color/maroon"/>
+
+        <!-- Pet Category -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Pet Category"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/maroon"
+            android:layout_marginTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/petCategoryGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton android:id="@+id/categoryPug" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pug" />
+            <RadioButton android:id="@+id/categoryCow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cow" />
+            <RadioButton android:id="@+id/categoryCat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cat" />
+            <RadioButton android:id="@+id/categoryBird" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bird" />
+            <RadioButton android:id="@+id/categoryFish" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fish" />
+            <RadioButton android:id="@+id/categoryDog" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dog" />
+            <RadioButton android:id="@+id/categoryRabbit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rabbit" />
+            <RadioButton android:id="@+id/categoryGoat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Goat" />
+        </RadioGroup>
+
+        <!-- Image Upload -->
+        <Button
+            android:id="@+id/uploadImageButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload Image"
+            android:textColor="@color/black"
+            android:backgroundTint="#C7C7C7"
+            android:background="@drawable/edittext_background"
+            android:layout_marginTop="16dp" />
+
+        <!-- About the Pet -->
+        <EditText
+            android:id="@+id/petDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="About the Pet"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:padding="12dp"
+            android:background="@drawable/linear_layout_outline"
+            android:layout_marginTop="12dp"
+            android:textCursorDrawable="@color/maroon"/>
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/sellPetButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sell Pet"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/maroon"
+            android:background="@drawable/edittext_background"
+            android:layout_marginTop="16dp"
+            android:padding="12dp" />
+
+    </LinearLayout>
+
+</ScrollView>

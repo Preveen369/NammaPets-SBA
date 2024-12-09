@@ -80,19 +80,33 @@ public class ShoppingCart extends AppCompatActivity {
     }
 
     private void addItemToCart(String petName, String petPrice, int petImageId, String petCategory, int petQuantity) {
-        String uniqueCartId = generateUniqueCartId();
-        CartItem item = new CartItem(uniqueCartId, petName, petPrice, petImageId, petCategory, petQuantity);
-        cartItems.add(item);
+        if (!isItemAlreadyInCart(petName)) {
+            String uniqueCartId = generateUniqueCartId();
+            CartItem item = new CartItem(uniqueCartId, petName, petPrice, petImageId, petCategory, petQuantity);
+            cartItems.add(item);
 
-        // Save to Firebase
-        saveCartToFirebase();
+            // Save to Firebase
+            saveCartToFirebase();
 
-        // Save locally
-        saveCartToSharedPreferences();
+            // Save locally
+            saveCartToSharedPreferences();
 
-        // Refresh UI
-        displayCartItems();
+            // Refresh UI
+            displayCartItems();
+        } else {
+            Toast.makeText(this, "Item already in the cart!", Toast.LENGTH_SHORT).show();
+        }
     }
+
+    private boolean isItemAlreadyInCart(String petName) {
+        for (CartItem item : cartItems) {
+            if (item.getPetName().equals(petName)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 
     private String generateUniqueCartId() {
         return String.valueOf(System.currentTimeMillis());

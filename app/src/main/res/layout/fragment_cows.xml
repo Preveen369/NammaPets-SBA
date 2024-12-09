@@ -5,15 +5,6 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!--<TextView
-        android:id="@+id/text_cows"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:text="Cows Section"
-        android:textColor="@android:color/black"
-        android:textStyle="bold" />-->
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_cows"
         android:layout_width="match_parent"
