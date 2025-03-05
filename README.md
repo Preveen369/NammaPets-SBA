@@ -63,4 +63,3 @@ For queries or suggestions:
 ## 🌟 **Show your support**
 If you like this project, please consider giving it a ⭐ on GitHub!
 
-Let me know if you’d like to customize any section further!
