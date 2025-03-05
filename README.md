@@ -40,7 +40,7 @@
 ## 🛠️ **Tech Stack**  
 
 - **Frontend**: Java, XML  
-- **Backend**: Firebase Realtime Database  
+- **Backend**: Firebase (Authentication, Realtime Database)
 - **Tools**: Android Studio  
 
 ---
