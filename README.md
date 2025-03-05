@@ -45,11 +45,37 @@
 
 ---
 
-## 📂 **Installation**  
-
-1. Clone the repository:  
-   ```bash
+## 📲 Installation & Setup
+1. **Clone the repository**
+   ```sh
    git clone https://github.com/your-username/Namma-Pets-SBA.git
+   ```
+2. **Open in Android Studio** and sync dependencies.
+3. **Configure Firebase**:
+   - Add `google-services.json` to `app/` directory.
+   - Enable Firebase Authentication & Realtime Database.
+3. **Run the app** on an emulator or a physical device.
+
+---
+
+## 🤝 Contributing
+Pull requests are welcome! Feel free to **fork the repository** and submit improvements.
+
+### Contributions are welcome! Follow these steps:
+1. **Fork the project.**
+2. **Create a feature branch:**
+   ```sh
+   git checkout -b feature-name
+   ```
+3. **Commit your changes:**
+   ```sh
+   git commit -m "Add feature description"
+   ```
+4. **Push to the branch:**
+   ```sh
+   git push origin feature-name
+   ```
+5. **Open a pull request.**
 
 ---
 
