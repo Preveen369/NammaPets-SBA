@@ -2,20 +2,34 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+We aim to support and maintain only the latest stable versions of the Namma Pets SBA app. Please refer to the table below for security support status:
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+| Version     | Supported          |
+| ----------- | ------------------ |
+| 1.2.x       | :white_check_mark: |
+| 1.1.x       | :white_check_mark: |
+| 1.0.x       | :x:                |
+| < 1.0       | :x:                |
+
+> ⚠️ Note: Only the latest two major releases will receive security updates. Please upgrade to the latest version for continued protection.
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+If you discover a security vulnerability in the **Namma Pets SBA** app:
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+1. **Contact Us Privately:**
+   - 📧 Email: [spreveen123@gmail.com](mailto:spreveen123@gmail.com)
+
+2. **Provide Details:**
+   - Describe the issue clearly with steps to reproduce.
+   - Mention the version affected and any logs/screenshots that may help.
+
+3. **Expected Response Time:**
+   - We typically respond within **48 hours** of receiving the report.
+   - You will receive updates on the status of the vulnerability (triaged, accepted, fixed, or declined).
+
+4. **Disclosure Policy:**
+   - Please give us a reasonable time to fix the issue before disclosing it publicly.
+   - Once resolved, we will credit the reporter (with permission) and update release notes accordingly.
+
+Thank you for helping us make **Namma Pets SBA** more secure! 🛡️
