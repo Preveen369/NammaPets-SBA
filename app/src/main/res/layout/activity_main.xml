@@ -33,20 +33,20 @@
                 android:drawableStart="@drawable/search_icon"
                 android:drawablePadding="8dp"
                 android:ems="10"
+                android:hint="Search here"
                 android:inputType="text"
                 android:padding="10dp"
-                android:hint="Search here"
-                android:textCursorDrawable="@drawable/custom_cursor"/>
+                android:textCursorDrawable="@drawable/custom_cursor" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="330dp"
                 android:layout_height="150dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="24dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
                 android:layout_gravity="center"
-                tools:ignore="ExtraText">                >
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="10dp"
+                tools:ignore="ExtraText">>
 
 
                 <ImageView
@@ -56,13 +56,13 @@
                     android:layout_gravity="center"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
+                    android:background="@drawable/edittext_background"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.489"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:background="@drawable/edittext_background"
-                    app:srcCompat="@drawable/pets"/>
+                    app:srcCompat="@drawable/pets" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -81,20 +81,20 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
                 android:layout_marginStart="24dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="24dp"
-                android:padding="5dp"
                 android:background="@drawable/edittext_background"
-                android:backgroundTint="#F2D5DA">
+                android:backgroundTint="#F2D5DA"
+                android:orientation="horizontal"
+                android:padding="5dp">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.2"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
+                    android:layout_weight="0.2"
                     android:orientation="vertical">
 
                     <ImageView
@@ -106,17 +106,17 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:text="cows"
-                        android:textColor="@color/black"
-                        android:layout_gravity="center"/>
+                        android:textColor="@color/black" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
                     android:layout_weight="0.2"
-                    android:orientation="vertical"
-                    android:layout_marginRight="5dp">
+                    android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/cat2"
@@ -127,16 +127,16 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:text="dogs"
-                        android:textColor="@color/black"
-                        android:layout_gravity="center"/>
+                        android:textColor="@color/black" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="0.2"
                     android:layout_marginRight="5dp"
+                    android:layout_weight="0.2"
                     android:orientation="vertical">
 
                     <ImageView
@@ -148,17 +148,17 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:text="cats"
-                        android:textColor="@color/black"
-                        android:layout_gravity="center"/>
+                        android:textColor="@color/black" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="0.2"
                     android:layout_marginRight="5dp"
+                    android:layout_weight="0.2"
                     android:orientation="vertical">
 
                     <ImageView
@@ -170,32 +170,32 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:text="rabbits"
-                        android:textColor="@color/black"
-                        android:layout_gravity="center"/>
+                        android:textColor="@color/black" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
                     android:layout_weight="0.2"
-                    android:orientation="vertical"
 
-                    android:layout_marginRight="5dp">
+                    android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/imageView5"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
-                        app:srcCompat="@drawable/view_all"/>
+                        app:srcCompat="@drawable/view_all" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="view all"
-                        android:textColor="@color/black"/>
+                        android:textColor="@color/black" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -212,12 +212,50 @@
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="83dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="24dp"
+                android:orientation="vertical"
+                app:cardBackgroundColor="#F3E2E5"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <!-- ImageView for the pet's image -->
+
+
+                <TextView
+                    android:id="@+id/pet_description_text_view"
+                    android:layout_width="256dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:justificationMode="inter_word"
+                    android:text="@string/app_description"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="68dp"
+                    android:layout_height="56dp"
+                    android:layout_gravity="right"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/edittext_background"
+                    android:src="@drawable/nammapets_logo" />
+
+            </androidx.cardview.widget.CardView>
+
         </LinearLayout>
     </ScrollView>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="89dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">

@@ -86,8 +86,6 @@ public class DogsFragment extends Fragment {
                     // Create and add the pet to the database if it doesn't already exist
                     Pet pet = new Pet(petId, ownerId, categoryId, dogName, categoryName, dogPrice, dogDescription);
                     petRef.setValue(pet);
-                } else {
-                    Toast.makeText(getContext(), "Pet already exists in the database.", Toast.LENGTH_SHORT).show();
                 }
             });
 

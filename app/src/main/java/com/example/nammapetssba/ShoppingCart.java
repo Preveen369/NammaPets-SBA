@@ -31,6 +31,7 @@ public class ShoppingCart extends AppCompatActivity {
     private List<CartItem> cartItems;
     private Button proceedToBuyButton;
     private TextView emptyCartMessage;
+    private TextView totalPriceTextView;
 
     private DatabaseReference databaseReference; // Firebase reference
     private SharedPreferences sharedPreferences; // For local persistence
@@ -49,15 +50,16 @@ public class ShoppingCart extends AppCompatActivity {
         cartContainer = findViewById(R.id.cart_container);
         proceedToBuyButton = findViewById(R.id.proceed_to_buy_button);
         emptyCartMessage = findViewById(R.id.empty_cart_message);
+        totalPriceTextView = findViewById(R.id.total_price);
         cartItems = loadCartFromSharedPreferences();
 
         // Add an item if passed from the previous activity
-        Intent intent = getIntent();
-        String petName = intent.getStringExtra("pet_name");
-        String petPrice = intent.getStringExtra("pet_price");
-        int petImageId = intent.getIntExtra("pet_image", 0);
-        String petCategory = intent.getStringExtra("pet_category");
-        int petQuantity = intent.getIntExtra("pet_qty", 1);
+        final Intent[] intent = {getIntent()};
+        String petName = intent[0].getStringExtra("pet_name");
+        String petPrice = intent[0].getStringExtra("pet_price");
+        int petImageId = intent[0].getIntExtra("pet_image", 0);
+        String petCategory = intent[0].getStringExtra("pet_category");
+        int petQuantity = intent[0].getIntExtra("pet_qty", 1);
 
         if (petName != null && petPrice != null) {
             addItemToCart(petName, petPrice, petImageId, petCategory, petQuantity);
@@ -69,9 +71,14 @@ public class ShoppingCart extends AppCompatActivity {
                 Toast.makeText(this, "Your cart is empty!", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "Proceeding to buy...", Toast.LENGTH_SHORT).show();
-                // Navigate to payment or confirmation activity
-                // Intent intent = new Intent(this, PaymentActivity.class);
-                // startActivity(intent);
+                Intent intents = new Intent(this, PaymentActivity.class);
+
+                // Pass all cart items to PaymentActivity
+                Gson gson = new Gson();
+                String cartItemsJson = gson.toJson(cartItems);
+                intents.putExtra("cart_items", cartItemsJson);
+
+                startActivity(intents);
             }
         });
 
@@ -114,6 +121,7 @@ public class ShoppingCart extends AppCompatActivity {
 
     private void displayCartItems() {
         cartContainer.removeAllViews();
+        double totalPrice = 0.0;
 
         if (cartItems.isEmpty()) {
             // Show empty cart message
@@ -124,9 +132,7 @@ public class ShoppingCart extends AppCompatActivity {
             emptyCartMessage.setVisibility(View.GONE);
             proceedToBuyButton.setVisibility(View.VISIBLE);
 
-            for (int i = 0; i < cartItems.size(); i++) {
-                CartItem item = cartItems.get(i);
-
+            for (CartItem item : cartItems) {
                 // Inflate cart item layout
                 View itemView = getLayoutInflater().inflate(R.layout.cart_item, null);
 
@@ -160,7 +166,7 @@ public class ShoppingCart extends AppCompatActivity {
                 });
 
                 // Delete button functionality
-                int finalIndex = i; // For use inside lambda
+                int finalIndex = cartItems.indexOf(item); // For use inside lambda
                 deleteButton.setOnClickListener(v -> {
                     cartItems.remove(finalIndex);
                     saveCartToFirebase();
@@ -168,9 +174,14 @@ public class ShoppingCart extends AppCompatActivity {
                     displayCartItems();
                 });
 
+                totalPrice += item.calculateTotalPrice();
+
                 cartContainer.addView(itemView);
             }
         }
+
+        // Display total price
+        totalPriceTextView.setText(String.format("Total: $%.2f", totalPrice));
     }
 
     private void saveCartToFirebase() {

@@ -36,10 +36,12 @@ dependencies {
 
     implementation libs.appcompat
     implementation libs.material
-    implementation libs.activity
+    implementation 'androidx.activity:activity-ktx:1.9.0'
+    implementation 'androidx.activity:activity:1.9.0'
     implementation libs.constraintlayout
     implementation libs.lifecycle.livedata.ktx
-    implementation libs.lifecycle.viewmodel.ktx
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6'
     implementation libs.navigation.fragment
     implementation libs.navigation.ui
     implementation libs.firebase.database
@@ -48,7 +50,8 @@ dependencies {
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
-    implementation 'com.google.code.gson:gson:2.8.9'
+    implementation 'com.google.code.gson:gson:2.12.1'
+    implementation 'com.stripe:stripe-android:20.0.0'
 
 
 }
