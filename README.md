@@ -1,27 +1,34 @@
-# 🐾 Namma Pets SBA  
+# 🐾 Namma Pets SBA
 
-**Namma Pets SBA** is an Android-based mobile application that provides an engaging platform for buying and selling pets. This app ensures seamless connectivity between pet enthusiasts with a user-friendly interface and interactive features.  
+![Platform](https://img.shields.io/badge/Platform-Android-blue.svg)
+![Tech](https://img.shields.io/badge/Backend-Firebase-orange.svg)
+![Language](https://img.shields.io/badge/Language-Java-yellow.svg)
+![UI](https://img.shields.io/badge/UI-XML-green.svg)
+![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)
+
+**Namma Pets SBA** is an Android-based mobile application designed to facilitate the buying and selling of pets in an engaging and interactive platform. It offers a user-friendly interface for browsing and listing pets, secure user authentication, and real-time data management using Firebase. Whether you're a pet lover looking to adopt or a seller wanting to find a new home for your furry friends, this app simplifies the process with seamless navigation and intuitive features.
 
 ---
 
 ## 🚀 Features  
 
-### 🛒 **Categories**  
-- Browse pets conveniently categorized by species, breed, age, and more.  
-- Filter and sort options for quick and personalized search results.  
+### 🛒 Pet Categories & Listings
+- Browse pets conveniently categorized by species, breed, age, and more.
+- Filter and sort options for a quick and personalized search experience.
+- View detailed information, images, and pricing for each pet.
 
-### 🔒 **User Authentication**  
-- Secure account creation and login using Firebase Authentication.  
-- Password recovery options for user convenience.  
+### 🔒 User Authentication
+- Secure sign-up and login using **Firebase Authentication**.
+- Password recovery options for convenience and account safety. 
 
-### 🛍️ **Buying Platform**  
-- Explore a variety of pets listed for sale.  
-- View detailed information and images of each pet.  
-- Direct communication with sellers through the app.  
+### 🛍️ Buying Platform
+- Explore a variety of pets available for purchase.
+- Add pets to a shopping cart for a smoother buying process.
+- Directly connect with sellers through the app interface.
 
-### 📤 **Selling Platform**  
-- Easily list pets for sale with images, descriptions, and pricing.  
-- Manage and update listings through a personalized dashboard.  
+### 📤 Selling Platform
+- List pets for sale with images, descriptions, and pricing.
+- Manage and update listings through a personalized dashboard.
 
 ### 🛒 **Shopping Cart**  
 - Add pets to your cart for a smooth purchasing experience.  
@@ -31,9 +38,9 @@
 - Save favorite pets for easy access later.  
 - Organize your wishlist with a single tap.  
 
-### 👤 **Profile View**  
-- Create and customize your user profile with personal details.  
-- View your purchase history and selling activity.  
+### 👤 **Profile Management**
+- Create and customize your user profile.
+- View your purchase history and selling activity.
 
 ---
 
@@ -45,7 +52,27 @@
 
 ---
 
+## 📂 Project Structure
+
+### 📱 Android App (`Namma Pets SBA`)
+The core Android application built with Java and XML, integrated with Firebase services for backend functionality.
+
+#### Key Components
+- `MainActivity.java` – Entry point of the app.
+- `Adapters/` – Custom adapters for rendering pet listings.
+- `Fragments/` – Modular UI components for different features (e.g., Home, Sell, Profile).
+- `Models/` – Data models representing Pet, User, and Cart.
+- `Layouts/` – XML layout files for UI screens and components.
+
+---
+
 ## 📲 Installation & Setup
+
+### Prerequisites
+- Android Studio installed
+- Firebase project setup
+
+### Steps
 1. **Clone the repository**
    ```sh
    git clone https://github.com/your-username/Namma-Pets-SBA.git
@@ -87,5 +114,5 @@ For queries or suggestions:
 ---
 
 ## 🌟 **Show your support**
-If you like this project, please consider giving it a ⭐ on GitHub!
+If you find this project interesting, please consider giving it a ⭐ on GitHub to show your support!
 
