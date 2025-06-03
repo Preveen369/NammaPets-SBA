@@ -54,16 +54,85 @@
 
 ## 📂 Project Structure
 
-### 📱 Android App (`Namma Pets SBA`)
-The core Android application built with Java and XML, integrated with Firebase services for backend functionality.
-
-#### Key Components
-- `MainActivity.java` – Entry point of the app.
-- `Adapters/` – Custom adapters for rendering pet listings.
-- `Fragments/` – Modular UI components for different features (e.g., Home, Sell, Profile).
-- `Models/` – Data models representing Pet, User, and Cart.
-- `Layouts/` – XML layout files for UI screens and components.
-
+```
+NammaPets-SBA/
+└── app/
+    └── src/
+        └── main/
+            ├── java/
+            │   └── com/example/nammapetssba/
+            │       ├── BirdsAdapter.java       # Adapter for displaying birds in a list
+            │       ├── BirdsFragment.java      # Fragment for birds-related UI
+            │       ├── CartItem.java           # Model class for cart items
+            │       ├── CategoryActivity.java   # Activity for category selection
+            │       ├── CategoryUIManager.java  # Utility for managing category UI
+            │       ├── CatsAdapter.java        # Adapter for displaying cats in a list
+            │       ├── CatsFragment.java       # Fragment for cats-related UI
+            │       ├── CowsAdapter.java        # Adapter for displaying cows in a list
+            │       ├── CowsFragment.java       # Fragment for cows-related UI
+            │       ├── DogsAdapter.java        # Adapter for displaying dogs in a list
+            │       ├── DogsFragment.java       # Fragment for dogs-related UI
+            │       ├── Favourites.java         # Activity/Fragment for managing favorites
+            │       ├── FishesAdapter.java      # Adapter for displaying fishes in a list
+            │       ├── FishesFragment.java     # Fragment for fishes-related UI
+            │       ├── GoatsAdapter.java       # Adapter for displaying goats in a list
+            │       ├── GoatsFragment.java      # Fragment for goats-related UI
+            │       ├── LoginActivity.java      # Activity for user login
+            │       ├── MainActivity.java       # Main entry point activity
+            │       ├── MainUIManager.java      # Utility for managing main UI components
+            │       ├── NavigationHandler.java  # Utility for handling navigation
+            │       ├── PaymentActivity.java    # Activity for payment processing
+            │       ├── Pet.java                # Model class for pet data
+            │       ├── PetDetailFragment.java  # Fragment for pet details UI
+            │       ├── PetListings.java        # Activity/Fragment for pet listings
+            │       ├── ProfileActivity.java    # Activity for user profile management
+            │       ├── PugsAdapter.java        # Adapter for displaying pugs in a list
+            │       ├── PugsFragment.java       # Fragment for pugs-related UI
+            │       ├── RabbitsAdapter.java     # Adapter for displaying rabbits in a list
+            │       ├── RabbitsFragment.java    # Fragment for rabbits-related UI
+            │       ├── SellPetActivity.java    # Activity for selling a pet
+            │       ├── ShoppingCart.java       # Activity/Fragment for shopping cart
+            │       ├── SignupActivity.java     # Activity for user signup
+            │       └── SplashActivity.java     # Splash screen activity
+            └── res/
+                ├── layout/                     # XML UI layouts
+                │   ├── activity_category.xml   # Layout for category activity
+                │   ├── activity_favourites.xml # Layout for favorites activity/fragment
+                │   ├── activity_login.xml      # Layout for login activity
+                │   ├── activity_main.xml       # Layout for main activity
+                │   ├── activity_payment.xml    # Layout for payment activity
+                │   ├── activity_pet_listings.xml # Layout for pet listings activity/fragment
+                │   ├── activity_profile.xml    # Layout for profile activity
+                │   ├── activity_sell_pet.xml   # Layout for sell pet activity
+                │   ├── activity_shopping_cart.xml # Layout for shopping cart activity/fragment
+                │   ├── activity_signup.xml     # Layout for signup activity
+                │   ├── activity_splash.xml     # Layout for splash activity
+                │   ├── bird_item.xml           # Layout for bird item in a list
+                │   ├── cart_item.xml           # Layout for cart item in a list
+                │   ├── cart_item_layout.xml一向 # Layout for cart item container
+                │   ├── cat_item.xml            # Layout for cat item in a list
+                │   ├── cow_item.xml            # Layout for cow item in a list
+                │   ├── dialog_pet_details.xml  # Layout for pet details dialog
+                │   ├── dog_item.xml            # Layout for dog item in a list
+                │   ├── favourite_item.xml      # Layout for favorite item in a list
+                │   ├── fish_item.xml           # Layout for fish item in a list
+                │   ├── fragment_birds.xml      # Layout for birds fragment
+                │   ├── fragment_cats.xml       # Layout for cats fragment
+                │   ├── fragment_cows.xml       # Layout for cows fragment
+                │   ├── fragment_dogs.xml       # Layout for dogs fragment
+                │   ├── fragment_fishes.xml     # Layout for fishes fragment
+                │   ├── fragment_goats.xml      # Layout for goats fragment
+                │   ├── fragment_pet_detail.xml # Layout for pet detail fragment
+                │   ├── fragment_pugs.xml       # Layout for pugs fragment
+                │   ├── fragment_rabbits.xml    # Layout for rabbits fragment
+                │   ├── goat_item.xml           # Layout for goat item in a list
+                │   ├── pug_item.xml            # Layout for pug item in a list
+                │   └── rabbit_item.xml         # Layout for rabbit item in a list
+                ├── menu/                       # Menu resources
+                └── values/                     # String, style, and other resources
+                    └── strings.xml, styles.xml
+                    └── values-night/           # Night mode resources
+```
 ---
 
 ## 📲 Installation & Setup
