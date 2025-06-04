@@ -81,11 +81,11 @@ NammaPets-SBA/
 
 ## 📲 Installation & Setup
 
-### Prerequisites
+### 📋 Prerequisites
 - Android Studio installed
 - Firebase project setup
 
-### Steps
+### 🧑‍💻 Steps to Run
 1. **Clone the repository**
    ```sh
    git clone https://github.com/your-username/Namma-Pets-SBA.git
