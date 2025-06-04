@@ -6,7 +6,7 @@
 ![UI](https://img.shields.io/badge/UI-XML-green.svg)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)
 
-**Namma Pets SBA** is an Android-based mobile application designed to facilitate the buying and selling of pets in an engaging and interactive platform. It offers a user-friendly interface for browsing and listing pets, secure user authentication, and real-time data management using Firebase. Whether you're a pet lover looking to adopt or a seller wanting to find a new home for your furry friends, this app simplifies the process with seamless navigation and intuitive features.
+**Namma Pets SBA** is an Android-based mobile application designed to facilitate the buying and selling of pets in an engaging and interactive platform. It offers a user-friendly interface for browsing and listing pets, secure user authentication, and real-time data management using Firebase. Whether you're a pet lover looking to buy or a seller wanting to find a new home for your furry friends, this app simplifies the process with seamless navigation and intuitive features.
 
 ---
 
