@@ -48,7 +48,8 @@
 
 - **Frontend**: Java, XML  
 - **Backend**: Firebase (Authentication, Realtime Database)
-- **Tools**: Android Studio  
+- **Tools**: Android Studio
+- **Target SDK**: 24+
 
 ---
 
