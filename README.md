@@ -1,5 +1,4 @@
 # 🐾 Namma Pets SBA
-
 ![Platform](https://img.shields.io/badge/Platform-Android-blue.svg)
 ![Tech](https://img.shields.io/badge/Backend-Firebase-orange.svg)
 ![Language](https://img.shields.io/badge/Language-Java-yellow.svg)
@@ -10,7 +9,22 @@
 
 ---
 
-## 🚀 Features  
+## 📋 Table of Contents
+
+| No. | Sections |
+|-----|----------|
+| 01  | [🚀 Features](#features) |
+| 02  | [🛠️ Tech Stack](#tech-stack) |
+| 03  | [📂 Project Structure](#project-structure) |
+| 04  | [📲 Installation & Setup](#installation-setup) |
+| 05  | [🤝 Contributing](#contributing) |
+| 06  | [📧 Contact](#contact) |
+| 07  | [🌟 Show your support](#show-your-support) |
+
+---
+
+<a name="features"></a>
+## 🚀 Features
 
 ### 🛒 Pet Categories & Listings
 - Browse pets conveniently categorized by species, breed, age, and more.
@@ -19,7 +33,7 @@
 
 ### 🔒 User Authentication
 - Secure sign-up and login using **Firebase Authentication**.
-- Password recovery options for convenience and account safety. 
+- Password recovery options for convenience and account safety.
 
 ### 🛍️ Buying Platform
 - Explore a variety of pets available for purchase.
@@ -30,13 +44,13 @@
 - List pets for sale with images, descriptions, and pricing.
 - Manage and update listings through a personalized dashboard.
 
-### 🛒 **Shopping Cart**  
-- Add pets to your cart for a smooth purchasing experience.  
-- View and manage cart items before checkout.  
+### 🛒 **Shopping Cart**
+- Add pets to your cart for a smooth purchasing experience.
+- View and manage cart items before checkout.
 
-### ❤️ **Favourites Option**  
-- Save favorite pets for easy access later.  
-- Organize your wishlist with a single tap.  
+### ❤️ **Favourites Option**
+- Save favorite pets for easy access later.
+- Organize your wishlist with a single tap.
 
 ### 👤 **Profile Management**
 - Create and customize your user profile.
@@ -44,15 +58,16 @@
 
 ---
 
-## 🛠️ **Tech Stack**  
-
-- **Frontend**: Java, XML  
+<a name="tech-stack"></a>
+## 🛠️ **Tech Stack**
+- **Frontend**: Java, XML
 - **Backend**: Firebase (Authentication, Realtime Database)
 - **Tools**: Android Studio
 - **Target SDK**: 24+
 
 ---
 
+<a name="project-structure"></a>
 ## 📂 Project Structure
 
 ```
@@ -79,12 +94,14 @@ NammaPets-SBA/
 ```
 ---
 
+<a name="installation-setup"></a>
 ## 📲 Installation & Setup
 
 ### 📋 Prerequisites
 - Android Studio installed
 - Firebase project setup
 
+<a name="steps-to-run"></a>
 ### 🧑‍💻 Steps to Run
 1. **Clone the repository**
    ```sh
@@ -98,6 +115,7 @@ NammaPets-SBA/
 
 ---
 
+<a name="contributing"></a>
 ## 🤝 Contributing
 Pull requests are welcome! Feel free to **fork the repository** and submit improvements.
 
@@ -119,6 +137,7 @@ Pull requests are welcome! Feel free to **fork the repository** and submit impro
 
 ---
 
+<a name="contact"></a>
 ## 📧 **Contact**
 For queries or suggestions:
 - 📧 Email: spreveen123@gmail.com
@@ -126,6 +145,7 @@ For queries or suggestions:
 
 ---
 
+<a name="show-your-support"></a>
 ## 🌟 **Show your support**
 If you find this project interesting, please consider giving it a ⭐ on GitHub to show your support!
 
